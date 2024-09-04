@@ -1,0 +1,43 @@
+@mixin overlay($height, $width, $color, $dir, $dir-value) {
+    &::before {
+        content: '';
+        position: absolute;
+        #{$dir}: $dir-value;
+        width: $width;
+        height: $height;
+        background: $color;
+
+    }
+}
+
+@mixin input($h , $w, $bc) {
+    height: $h;
+    width: $w;
+    outline: 0;
+    border: 1px solid $bc;
+    transition: .3s ease-in-out;
+}
+
+@mixin centerPosition() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin cricle($size ) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+}
+
+@mixin pseudoEl($w, $h, $color, $dir, $dirValue) {
+    background-color: $color;
+    width: $w;
+    height: $h;
+    #{$dir}: $dirValue
+}
+@mixin gridCol($min,$max){
+    grid-template-columns: repeat(auto-fill , minmax($min,$max));
+}
+

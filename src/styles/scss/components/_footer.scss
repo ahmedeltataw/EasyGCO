@@ -1,0 +1,95 @@
+@use "../helpers/color" as *;
+@use "../helpers/extend" as *;
+@use "../helpers/mixin" as *;
+
+footer {
+    min-height: 70vh;
+    padding-top: 5vh;
+
+    .footerAbout {
+        a {
+            height: 70px;
+        }
+
+        p {
+            // font-size: clamp(16px, 1vw + .7rem, 20px);
+            color: $subtitle;
+            line-height: 32px;
+            font-weight: 400;
+            padding: 20px 0;
+        }
+    }
+
+    .footerLinks {
+
+        // text-align: start;
+        h3 {
+            font-size: 28px;
+            padding-bottom: 15px;
+
+        }
+
+        ul {
+            padding-block: 10px;
+
+            li {
+                padding-bottom: 15px;
+
+                a {
+                    color: $subtitle;
+                    transition: $t-s;
+
+                    &:hover {
+                        color: $hover;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .copyRight {
+        color: $subtitle;
+        background-color: #FAF9F6;
+        height: 60px;
+
+        a {
+            color: $subtitle;
+            transition: $t-s;
+
+            &:hover {
+                color: $hover;
+            }
+
+            svg {
+                width: 24px;
+                color: $title;
+            }
+
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-top: 15px;
+
+            li:has(svg) {
+                border: 1px solid $title;
+                transition: $t-s;
+                @include cricle (35px);
+                display: flex;
+                    align-items: center;
+                    justify-content: center;
+                &:hover{
+                    border-color: $hover;
+                    background-color: $hover;
+                    svg{
+                        color: $w;
+                    }
+                }
+            }
+        }
+    }
+
+}

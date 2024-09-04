@@ -1,0 +1,23 @@
+---
+import LeftSide from "./LeftSide.astro";
+import RightSide from "./RightSide.astro";
+import { Image } from "astro:assets";
+import TriangleImg from "@assets/images/Triangle.png"
+---
+<section class="hero">
+    <div class="Triangle">
+        <Image src={TriangleImg} alt={``} format="webp" />
+    </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- left -->
+            <div class="col-lg-5">
+                <LeftSide/>
+            </div>
+            <!-- right -->
+            <div class="col-lg-7 ">
+                <RightSide/>
+            </div>
+        </div>
+    </div>
+</section>

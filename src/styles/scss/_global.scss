@@ -1,0 +1,88 @@
+@use "./helpers/color" as *;
+@use "./helpers/extend" as *;
+@use "./helpers/mixin" as *;
+
+
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    li {
+        list-style: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+p{
+    margin-bottom: 0;
+}
+img,
+video,
+svg {
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+
+.LinkBtn,
+.LinkBtnBG {
+    border: 1px solid $hover;
+    border-radius: 52px;
+    padding: 8px 30px;
+    transition: $t-s;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 15px;
+    svg{
+        width: 28px;
+        color: $hover;
+        transition: $t-s;
+    }
+
+}
+
+.LinkBtn {
+    color: $title;
+    &:hover {
+        background-color: $hover;
+        color: $w;
+        svg{
+            color: $w;
+        }
+    }
+}
+
+.LinkBtnBG {
+    background-color: $hover;
+    color: $w;
+    font-weight: 500;
+
+    &:hover {
+        background-color: transparent;
+        color: $title;
+    }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

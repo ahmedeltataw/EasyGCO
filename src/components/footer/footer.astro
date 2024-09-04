@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import Logo from "@assets/images/logo.png";
+import CopyRight from "./CopyRigh.astro"
+---
+
+<footer>
+  <div class="container">
+    <div class="row align-items-start">
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="footerAbout">
+          <a href="/" class="Logo">
+            <Image src={Logo} alt={`logo `} />
+          </a>
+          <p>
+            "EasyGCO: Your all-in-one e-commerce solution, offering powerful
+            tools to build, manage, and grow your online store with ease."
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="footerLinks ">
+            <ul>
+                <h3>Solutions</h3>
+                <li><a href="#">Digital products</a></li>
+                <li><a href="#">Physical products</a></li>
+                <li><a href="#">Customize your store</a></li>
+                <li><a href="#">Discount Coupon</a></li>
+                <li><a href="#">Payment Gateways</a></li>
+                <li><a href="#">Tax Management</a></li>
+                <li><a href="#">Automation</a></li>
+                <li><a href="#">Drop shipping</a></li>
+                <li><a href="#">Subscriptions</a></li>
+            </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="footerLinks ">
+            <ul>
+                <h3>About</h3>
+                <li><a href="#">Home </a></li>
+                <li><a href="#">Pricing </a></li>
+                <li><a href="#">Members  </a></li>
+                <li><a href="#">Features </a></li>
+                <li><a href="#">Contact </a></li>
+            </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="footerLinks ">
+            <ul>
+                <h3>Recourses</h3>
+                <li><a href="#">Official Blog </a></li>
+                <li><a href="#">GitHub Profile </a></li>
+                <li><a href="#">Help Center  </a></li>
+            </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <CopyRight/>
+</footer>

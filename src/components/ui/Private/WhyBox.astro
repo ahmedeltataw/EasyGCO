@@ -1,0 +1,20 @@
+---
+import { Icon } from "astro-icon/components";
+interface Props {
+    iconName:string,
+    title:string,
+    des:string,
+}
+const { iconName, title, des } = Astro.props;
+---
+<div class="box" >
+    <!-- icons -->
+    <div class="iconContainer">
+      <Icon name={iconName} />
+    </div>
+    <!-- details -->
+    <div class="detailsBox">
+      <p class="title">{title}</p>
+      <p class="des">{des}</p>
+    </div>
+  </div>

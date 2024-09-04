@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import img from "@assets/images/Solutions.png";
+import img1 from "@assets/images/S1.png";
+import img2 from "@assets/images/S2.png";
+---
+<div class="leftSide" >
+    <div class="imgContainer">
+        <Image src={img} alt={`image`} format="webp" quality={70} />
+    </div>
+    <div class="flying">
+        <Image src={img1} alt={`image`} format="webp" quality={70} />
+    </div>
+    <div class="flying">
+        <Image src={img2} alt={`image`} format="webp" quality={70} />
+    </div>
+</div>

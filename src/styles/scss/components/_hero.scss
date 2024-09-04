@@ -1,0 +1,107 @@
+@use "../helpers/color" as *;
+@use "../helpers/extend" as *;
+
+.hero {
+    position: relative;
+    margin-top: 79px;
+    
+    .Triangle {
+        position: absolute;
+        top: -79px;
+        right: -80px;
+        height: 100vh;
+        z-index: -1;
+        @media(max-width:580px){
+            top: auto;
+            right: -150px;
+            height: auto;
+        }
+    }
+
+    .rightSide {
+        margin-top: 25px;
+
+        .mainImage {
+            height: 83vh;
+            width: 100%;
+            @media(max-width:580px){
+                height: auto;
+            }
+            img {
+                object-fit: contain;
+            }
+        }
+
+        .flyingThing ,.flyingThing-2 , .flyingThing-3{
+            position: absolute;
+            
+
+            svg {
+               width: 48px;
+            }
+
+        }
+        .flyingThing{
+            bottom: 25px;
+            width: 180px;
+            @media(max-width: 991px){
+                position: relative;
+                bottom: 150px;
+            }  
+            @media(max-width:580px){
+                width: 140px;
+                bottom: 70px;
+            } 
+        }
+        .flyingThing-2{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+          
+        }
+        .flyingThing-3{
+            top: 50px;
+        }
+        @media(max-width:991px){
+            .flyingThing-2 , .flyingThing-3{
+                display: none;
+            }
+        }
+    }
+
+    .leftSide {
+
+        // padding-right: 70px;
+        h1 {
+            color: rgba(29, 29, 29, 1);
+            font-size: clamp(48px, 5vw + 2rem, 72px);
+            font-weight: 600;
+
+            span {
+                color: $title;
+                font-weight: 400;
+                font-size: clamp(48px, 5vw + 2rem, 60px);
+            }
+        }
+
+        p {
+            font-size: clamp(16px, 1vw + .7rem, 20px);
+            color: $subtitle;
+            line-height: 32px;
+            font-weight: 400;
+            padding: 20px 0;
+        }
+
+    }
+    @media(max-width:991px){
+        .row{
+        .col-lg-7{
+            order: 1;
+        }
+        .col-lg-5{
+            order: 2;
+        }
+    }
+    }
+
+}

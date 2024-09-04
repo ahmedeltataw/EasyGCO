@@ -1,0 +1,102 @@
+---
+import { Image } from "astro:assets";
+import img from "@assets/images/Features.png";
+import WhyBox from "../../ui/Private/WhyBox.astro";
+---
+
+<section class="features">
+  <h2>Features Designed to Enhance <br /> <span>Your Business</span></h2>
+
+  <div class="container">
+    <!-- image -->
+    <div class="BGImage"><Image src={img} alt={`bg image`} /></div>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <!--  -->
+          <WhyBox
+            iconName="F1"
+            title="Customizable Store"
+            des="Easily customize your store with options for color schemes, collection banners, and integrating branding elements to create a unique look that reflects your brand."
+          />
+          <!--  -->
+        </div>
+        <div class="swiper-slide">
+          <!--  -->
+          <WhyBox
+            iconName="F2"
+            title="Marketing Tools"
+            des="Boost your sales with SEO optimization, email marketing, and social media integration."
+          />
+          <!--  -->
+        </div>
+        <div class="swiper-slide">
+          <!--  -->
+          <WhyBox
+            iconName="F3"
+            title="Detailed Analytics"
+            des="Monitor your store’s performance and make informed decisions with our analytics and reporting tools."
+          />
+          <!--  -->
+        </div>
+        <div class="swiper-slide">
+          <!--  -->
+          <WhyBox
+            iconName="W4"
+            title="No Additional Transaction Fees"
+            des="Keep more of your earnings with 0% additional transaction fees."
+          />
+          <!--  -->
+        </div>
+        <div class="swiper-slide">
+          <!--  -->
+          <WhyBox
+            iconName="F5"
+            title="User-Friendly Interface"
+            des="Set up and manage your store without any technical skills."
+          />
+          <!--  -->
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!--  -->
+  </div>
+</section>
+<script type="module">
+  import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    breakpoints: {
+      580: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      991: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+    },
+  });
+</script>

@@ -1,0 +1,28 @@
+
+@use "./helpers/color" as *;
+@use "./helpers/mixin" as *;
+@use "./components/header";
+@use "./components/footer";
+@use "./pages/Home";
+
+body {
+    background-color: $w;
+    color: $subtitle;
+    overflow-x: hidden;
+    font-family: Roboto ;
+    
+}
+
+
+
+
+::-webkit-scrollbar{
+    width: 6px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: $hover;
+    border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: #eaeaea;
+}

@@ -1,0 +1,101 @@
+@use "../helpers/color" as *;
+@use "../helpers/extend" as *;
+@use "../helpers/mixin" as *;
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    .AE_header{
+        padding: 16px 0;
+        .navbar-brand{
+            height: 47px;
+        }
+        .navbar-collapse{
+            .navbar-nav {
+                gap: 30px;
+                .nav-link{
+                    color: $title;
+                    font-size: 18px;
+                    font-weight: 400;
+                    transition: $t-s;
+                    &:hover{
+                        color: $hover;
+                    }
+                }
+                .dropdown{
+                    display: flex;
+                    align-items: center;
+                    svg{
+                        width: 22px;
+                        padding-top: 3px;
+                       }
+                }
+                .dropdown-toggle{
+                    padding-right: 0;
+                    &::after{
+                        display: none;
+                    }
+                   
+                }
+                .LinkBtn , .LinkBtnBG{
+                    border: 1px solid $hover;
+                    border-radius: 52px;
+                    padding: 8px 30px ;
+                    transition: $t-s;
+                    
+                    
+                }
+                .LinkBtn{
+                    &:hover{
+                        background-color: $hover;
+                        color: $w;
+                    }
+                }
+                .LinkBtnBG{
+                    background-color: $hover;
+                    color: $w;
+                    font-weight: 500;
+                    &:hover{
+                        background-color: transparent;
+                        color: $title;
+                    }
+                }
+                @media(max-width:991px){
+                    background-color: $w;
+                    padding-block: 20px;
+                    padding-inline-start: 50px;
+                    gap: 20px;
+                    box-shadow: 0 20px 20px rgba($color: #000000, $alpha: .1);
+                 
+                }
+            }
+            @media(max-width:991px){
+                width: 100%;
+                position: absolute;
+                top: 79px;
+                left: 0;
+            }
+        }
+        .navbar-toggler{
+            border: none;
+            @include cricle(35px);
+            background-color: red;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg{
+                color: $w;
+                width: 24px;
+            }
+           
+            &:focus{
+                box-shadow:none;
+            }
+            @media(min-width:992px){
+                display: none;
+            }
+        }
+    }
+}
